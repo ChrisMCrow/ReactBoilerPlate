@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
+import 'bootstrap/dist/css/bootstrap.min.css';
+var module;
+
 
 const render = (Component) => {
   ReactDOM.render(
@@ -16,6 +19,6 @@ render(App);
 
 if (module.hot) {
   module.hot.accept('./components/App', () => {
-    render(App)
+    render(App);
   });
 }
