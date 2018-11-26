@@ -12,6 +12,6 @@ function ConfirmationQuestions(props) {
 
 ConfirmationQuestions.propTypes = {
   onTroubleshootingConfirmation: PropTypes.func
-}
+};
 
 export default ConfirmationQuestions;
