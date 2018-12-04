@@ -12,6 +12,9 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      selectedTicket: null
+    };
     this.handleChangingSelectedTicket = this.handleChangingSelectedTicket.bind(this);
   }
 
@@ -56,13 +59,14 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  masterTicketList: PropTypes.object
+  masterTicketList: PropTypes.object,
+  selectedTicket: PropTypes.string
 };
 
 const mapStateToProps = state => {
   return {
-    masterTicketList: state
-  }
-}
+    masterTicketList: state.masterTicketList
+  };
+};
 
 export default withRouter(connect(mapStateToProps)(App));
